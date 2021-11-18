@@ -1,10 +1,6 @@
 let project_folder = require("path").basename(__dirname);
 let source_folder = "#src";
 let fs = require('fs');
-var gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
-
-
 
 let path = {
     build: {
@@ -83,6 +79,7 @@ function css() {
         )
         .pipe(
             autoprefixer({
+                grid: true,
                 overrideBrowserslist: ["last 5 versions"],
                 cascade: true
             })
@@ -164,11 +161,6 @@ gulp.task('svgSprite', function () {
         }))
         .pipe(dest(path.build.img))
 })
-
-gulp.task('deploy', function () {
-    return gulp.src([source_folder + '/**/*']);
-      .pipe(ghPages());
-});
 
 function fontsStyle(params) {
 

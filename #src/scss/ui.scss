@@ -50,13 +50,10 @@
     &__close {
         position: absolute;
         right: 20px;
-        top: 70px;
-        width: 84px;
-        height: 86px;
         cursor: pointer;
         @include responsive-size(width,84,34);
         @include responsive-size(height,84,34);
-        @include responsive-size(top,70,80);
+        @include responsive-size(top,70,30);
         span{
             top:calc(50%-1px);
             position:absolute;
@@ -115,13 +112,11 @@
 }
 .swiper-pagination-bullet{
     cursor: pointer;
-    width: 160px;
-    @include responsive-size(width,100, 30);
+    @include responsive-size(width,80, 30);
     height: 10px!important;
     background-color: #bfae99;
     border-radius: 0!important;
     &:not(:last-child){
-        margin-right: 80px;
         @include responsive-size(margin-right,50, 10);
     }
 

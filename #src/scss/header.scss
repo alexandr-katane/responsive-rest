@@ -3,17 +3,8 @@
     width: 100%;
     z-index: 50;
     left: 0;
-    top: 245px;
-    @include responsive-size(top,60,0);
-    @media (max-width:1700px) {
-        top: 60px;
-    }
-    @media (max-width:2200px) {
-        top: 100px;
-    }
-    @media (max-width:1600px) {
-        top: 120px;
-    }
+    @include responsive-size(top,127,30);
+    
     &__row {
         display: flex;
         justify-content: center;
@@ -54,8 +45,7 @@
 
     &__item {
         &:not(:last-child) {
-            margin: 0 140px 0 0 ;
-            @include responsive-size(margin-right,110,0);
+            @include responsive-size(margin-right,62,0);
         }
         @media (max-width:$md3+px) { 
             &:not(:last-child) {
@@ -70,8 +60,7 @@
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: #ffffff;
-        font-size: 28px;
-        @include responsive-size(font-size,20,14);
+        font-size: 14px;
         @media (any-hover: hover) {
             &:hover {
                 text-decoration: underline;
@@ -79,9 +68,6 @@
         }
         @media (max-width:$md3+px) { 
             font-size: 25px;
-        }
-        @media (max-width:1600px) {
-            font-size: 24px;
         }
     }
 }
