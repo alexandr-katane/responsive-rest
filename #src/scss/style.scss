@@ -18,7 +18,7 @@ $md4:479.98;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 //<Шрифт по умолчанию>========================================================================================
-$fontFamily: "Open Sans Condensed";
+$fontFamily: "Open Sans Condensed", sans-serif;
 //</Шрифт по умолчанию>========================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>========================================================================================
@@ -27,7 +27,7 @@ $fontFamily: "Open Sans Condensed";
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>========================================================================================
 body {
     font-family: $fontFamily;
-    &.lock {
+    &._lock {
         overflow: hidden;
     }
 }
@@ -167,20 +167,6 @@ body {
         top: 0;
         left: 0;
 	}
-    &__text {  
-        line-height: 1.2;
-        font-weight: 300;
-        letter-spacing: 0.025em;
-        color: #ffffff;
-        z-index: 2;
-        position: relative;
-        margin: 16px 0 0 0;
-        max-width: 820px;
-        text-align: center;
-        margin: 0 10px;
-        @include responsive-size(font-size,16, 14);
-        @include responsive-size(margin-top,20, 10);
-    }
     &__logo {
         position: absolute;
         width: 100%;
@@ -197,15 +183,32 @@ body {
             margin: 0 0 50px 0;
             @include responsive-size(margin-bottom,20, 10);
         }
-        span {
-            font-family: "PlayfairDisplaySC-Regular";
-            line-height: 1.2;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.025em;
-            color: #ffffff;
-            @include responsive-size(font-size,24, 16);
-        }
+        
+    }
+
+    &__title {
+        font-family: "PlayfairDisplaySC-Regular";
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        @include responsive-size(font-size,24, 16);
+    }
+
+    &__text {  
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        z-index: 2;
+        position: relative;
+        margin: 16px 0 0 0;
+        max-width: 820px;
+        text-align: center;
+        margin: 0 10px;
+        @include responsive-size(font-size,16, 14);
+        @include responsive-size(margin-top,20, 10);
     }
     @media (max-width:800px) {
         padding: 0 0 80% 0;
@@ -795,16 +798,15 @@ body {
         background-color: #590c0c;
         transition: all 0.3s ease 0s;
         border-radius: 12px;
-        line-height: 48px;
         font-weight: 300;
         letter-spacing: 0.02em;
         color: #ffffff;
         align-self: center;
         @include responsive-size(font-size,18,16);
-        @include responsive-size(padding-bottom,15,5);
-        @include responsive-size(padding-top,15,5);
-        @include responsive-size(padding-left,150,30);
-        @include responsive-size(padding-right,150,30);
+        @include responsive-size(padding-bottom,20,5);
+        @include responsive-size(padding-top,20,5);
+        @include responsive-size(padding-left,130,30);
+        @include responsive-size(padding-right,130,30);
         @media (any-hover:hover) {
             &:hover {
                 background-color: #490505;

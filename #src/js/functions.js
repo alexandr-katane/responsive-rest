@@ -17,16 +17,19 @@ testWebP(function (support) {
 });
 
 
-
 const iconMenu = document.querySelector('.icon-menu');
 const menuBody = document.querySelector('.menu__body');
+const header = document.querySelector('.header');
 if (iconMenu) {
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
+        header.classList.toggle('_height');
     });
 }
+
+
 
 function ibg() {
 

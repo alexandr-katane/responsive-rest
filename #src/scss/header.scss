@@ -1,9 +1,20 @@
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 50;
     left: 0;
-    @include responsive-size(top,127,30);
+    @include responsive-size(top,87,30);
+    @media (min-width: $md3+px) {
+        padding: 20px 0;
+    }
+
+    &._height{
+        top: 0;
+    }
+    &._active {
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
     
     &__row {
         display: flex;
